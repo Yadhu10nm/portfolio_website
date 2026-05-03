@@ -1,485 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yadhu Krishna NM | AI/ML Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yadhu Krishna | AI/ML Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="three-bg"></canvas>
+  <div class="bg-grid"></div>
 
-  <!-- Neural Network Canvas Background -->
-  <canvas id="neural-canvas"></canvas>
+  <div class="welcome-overlay" id="welcomeOverlay" aria-hidden="true">
+    <div class="welcome-text" id="welcomeText"></div>
+  </div>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-brand">YK<span class="accent">.</span></div>
-    <div class="nav-links" id="nav-links">
-      <a href="#hero" class="nav-link">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#education" class="nav-link">Education</a>
-      <a href="#certifications" class="nav-link">Certs</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </div>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section id="hero" class="hero-section">
-    <div class="hero-content">
-      <div class="hero-badge fade-up">
-        <span class="badge-dot"></span>
-        Available for opportunities
+  <header class="top-header">
+    <div class="top-header-inner">
+      <div class="brand-wrap">
+        <h1>Yadhu Krishna NM</h1>
+        <p>BCA Student · AI/ML Enthusiast · CodeX Club Leader</p>
       </div>
-      <h1 class="hero-name fade-up">
-        <span class="name-line">Yadhu Krishna</span>
-        <span class="name-line name-nm">NM</span>
-      </h1>
-      <p class="hero-tagline fade-up">
-        <span class="typed-text" id="typed"></span><span class="cursor">|</span>
-      </p>
-      <p class="hero-sub fade-up">BCA Student · AI/ML Enthusiast · CodeX Club Leader</p>
-      <div class="hero-cta fade-up">
-        <a href="#projects" class="btn btn-primary">
-          <i class="bi bi-rocket-takeoff"></i> View Projects
-        </a>
-        <a href="#contact" class="btn btn-outline">
-          <i class="bi bi-send"></i> Contact Me
-        </a>
+
+      <nav class="button-navbar">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="hamburger" id="hamburgerBtn">&#9776;</div>
+
+      <nav class="mobile-nav" id="navMenu">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="profile-showcase">
+    <div class="profile-panel">
+      <div class="profile-frame">
+        <img src="https://raw.githubusercontent.com/Yadhu10nm/portfolio_website/main/yadhu_krishna.jpg" alt="Yadhu Krishna" class="profile-img" />
       </div>
-      <div class="hero-socials fade-up">
-        <a href="https://github.com/Yadhu10nm" target="_blank" class="social-icon" title="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/yadhu-krishna-nm-0b5b5b31a" target="_blank" class="social-icon" title="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/_yadh.u_" target="_blank" class="social-icon" title="Instagram">
+      <div class="profile-text">
+        <h2>Building Intelligent AI Experiences</h2>
+        <p>Surana College (Autonomous), Bengaluru · Machine Learning and Artificial Intelligence Projects</p>
+      </div>
+      <div class="hero-3d" aria-hidden="true">
+        <canvas id="hero-three"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="content-section">
+    <div class="container">
+      <div class="about-card glass-card section-inner">
+        <h2>About Me</h2>
+        <p>Hi, I'm <strong>Yadhu Krishna NM</strong>, currently pursuing <strong>BCA</strong> at <strong>Surana College (Autonomous), Bengaluru</strong>.</p>
+        <p>I'm deeply passionate about <strong>Machine Learning</strong> and <strong>Artificial Intelligence</strong>.</p>
+        <p>I love <strong>coding</strong>, solving real-world <strong>problems</strong>, and continuously learning new tech.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="content-section">
+    <div class="container">
+      <div class="education-card glass-card section-inner">
+        <h2>Education</h2>
+
+        <div class="edu-item">
+          <h3>12th Standard</h3>
+          <p><strong>Indira Gandhi Public School</strong>, Mambaram, Kannur, Kerala</p>
+          <p>Passed with <strong>84%</strong></p>
+        </div>
+
+        <div class="edu-item">
+          <h3>BCA</h3>
+          <p><strong>Surana College (Autonomous)</strong>, Bengaluru</p>
+          <p>1st Sem SGPA: <strong>8.69</strong><br />2nd Sem SGPA: <strong>8.40</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="content-section">
+    <div class="container">
+      <div class="projects-card glass-card section-inner">
+        <h2>My Projects</h2>
+        <div class="scroll-wrap">
+          <div class="scroll-track" id="projectsTrack">
+            <article class="scroll-item">
+              <h3>Bengaluru House Price Prediction</h3>
+              <p>Tech: Python, Scikit-learn, Pandas, NumPy</p>
+              <iframe src="https://drive.google.com/file/d/1LynsEmsE5LM_ech0EKteAjAgFS6Ahs85/preview" height="270" allow="autoplay"></iframe>
+            </article>
+
+            <article class="scroll-item">
+              <h3>Virtual Calculator</h3>
+              <p>Tech: Python, OpenCV, MediaPipe</p>
+              <iframe src="https://drive.google.com/file/d/1Lzq_oJ0cY63KStWyLMBcMQcvlGvs4NtR/preview" height="270" allow="autoplay"></iframe>
+            </article>
+
+            <article class="scroll-item">
+              <h3>Hand Gesture Controlled Game</h3>
+              <p>Tech: Python, OpenCV, MediaPipe, Pygame</p>
+              <iframe src="https://drive.google.com/file/d/1M1FMv9EA-ZQbCo-5JxC1Ndo6RpJPf_lY/preview" height="270" allow="autoplay"></iframe>
+            </article>
+
+            <article class="scroll-item">
+              <h3>Virtual Drawing</h3>
+              <p>Tech: Python, OpenCV, MediaPipe</p>
+              <iframe src="https://drive.google.com/file/d/1Lz4kDSfZVI1Jyr831kYw92eq6FVcWsAn/preview" height="270" allow="autoplay"></iframe>
+            </article>
+
+            <article class="scroll-item">
+              <h3>Text to Speech</h3>
+              <p>Tech: Python, gTTS, pyttsx3</p>
+              <iframe src="https://drive.google.com/file/d/1Luus8g1saQ6ELHiGykWoEBHcL6R_JrQ9/preview" height="270" allow="autoplay"></iframe>
+            </article>
+          </div>
+          <div class="scroll-controls">
+            <button class="scroll-btn" id="projectsPrev" aria-label="Previous projects"><i class="bi bi-arrow-left"></i></button>
+            <button class="scroll-btn" id="projectsNext" aria-label="Next projects"><i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="more-projects">
+          <p>For more awesome projects, visit my <a href="https://github.com/Yadhu10nm" target="_blank">GitHub profile</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="content-section">
+    <div class="container">
+      <div class="glass-card section-inner">
+        <h2>Experience</h2>
+        <div class="experience-grid">
+          <article class="experience-card">
+            <h3>AI/ML Student</h3>
+            <p><strong>Surana College</strong></p>
+            <p>Working on ML & AI projects</p>
+          </article>
+
+          <article class="experience-card">
+            <h3>CodeX Club Leader</h3>
+            <p>Leading coding events and hackathons</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="content-section">
+    <div class="container">
+      <div class="skills-card glass-card section-inner">
+        <h2>My Skills</h2>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>Jupyter Notebook</li>
+          <li>MySQL</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>C (Basic)</li>
+          <li>Java (Basic)</li>
+          <li>Problem Solving</li>
+          <li>Self Learning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="content-section">
+    <div class="container">
+      <div class="cert-card glass-card section-inner">
+        <h2>My Certifications</h2>
+        <div class="scroll-wrap">
+          <div class="scroll-track" id="certTrack">
+            <article class="scroll-item">
+              <h3>Python: Beginner to Advanced - Codebasics</h3>
+              <img src="https://raw.githubusercontent.com/Yadhu10nm/portfolio_website/main/certificates/python.jpg" alt="Python Certificate" />
+            </article>
+
+            <article class="scroll-item">
+              <h3>Complete Machine Learning with Python - Udemy</h3>
+              <img src="https://raw.githubusercontent.com/Yadhu10nm/portfolio_website/main/certificates/machine_learning.jpg" alt="Machine Learning Certificate" />
+            </article>
+          </div>
+          <div class="scroll-controls">
+            <button class="scroll-btn" id="certPrev" aria-label="Previous certificate"><i class="bi bi-arrow-left"></i></button>
+            <button class="scroll-btn" id="certNext" aria-label="Next certificate"><i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <div class="container">
+      <div class="contact-card glass-card section-inner">
+        <h2>Contact Me</h2>
+
+        <div class="contact-item">
+          <i class="bi bi-telephone-fill"></i>
+          <span>+91 81118 35438</span>
+        </div>
+
+        <div class="contact-item">
           <i class="bi bi-instagram"></i>
-        </a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="orbit-ring ring-1"></div>
-      <div class="orbit-ring ring-2"></div>
-      <div class="orbit-ring ring-3"></div>
-      <div class="avatar-glow">
-        <img src="yadhu_krishna.jpg" alt="Yadhu Krishna" class="hero-avatar" onerror="this.style.display='none';document.querySelector('.avatar-fallback').style.display='flex'">
-        <div class="avatar-fallback" style="display:none">YK</div>
-      </div>
-      <div class="orbit-dot dot-1"></div>
-      <div class="orbit-dot dot-2"></div>
-      <div class="orbit-dot dot-3"></div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about-section section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// WHO AM I</span>
-        <h2 class="section-title">About <span class="accent">Me</span></h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>Hi, I'm <strong class="highlight">Yadhu Krishna NM</strong> — a passionate BCA student at <strong class="highlight">Surana College (Autonomous), Bengaluru</strong>, with a deep focus on <span class="tag-chip">Machine Learning</span> and <span class="tag-chip">Artificial Intelligence</span>.</p>
-          <p>I build intelligent systems and computer vision applications that solve real-world problems. From predicting Bengaluru house prices to creating gesture-controlled interfaces — I love pushing the limits of what code can do.</p>
-          <p>As the <strong class="highlight">Leader of CodeX Club</strong> at Surana College, I actively drive a culture of innovation, hackathons, and collaborative learning among my peers.</p>
-          <p>I'm a strong believer in self-learning, continuously expanding my skills in Python, ML libraries, and data science tools.</p>
+          <a href="https://www.instagram.com/_yadh.u_" target="_blank">@_yadh.u_</a>
         </div>
-        <div class="about-stats reveal">
-          <div class="stat-card">
-            <span class="stat-num">5+</span>
-            <span class="stat-label">Projects Built</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">2</span>
-            <span class="stat-label">Certifications</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">8.69</span>
-            <span class="stat-label">Best SGPA</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">1</span>
-            <span class="stat-label">Club Led</span>
-          </div>
+
+        <div class="contact-item">
+          <i class="bi bi-linkedin"></i>
+          <a href="https://www.linkedin.com/in/yadhu-krishna-nm-0b5b5b31a" target="_blank">linkedin.com/in/yadhu-krishna-nm-0b5b5b31a</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="bi bi-github"></i>
+          <a href="https://github.com/Yadhu10nm" target="_blank">github.com/Yadhu10nm</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS SECTION -->
-  <section id="skills" class="skills-section section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// CAPABILITIES</span>
-        <h2 class="section-title">My <span class="accent">Skills</span></h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="bi bi-code-slash"></i>
-            <h3>Programming</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">C (Basic)</span>
-            <span class="skill-tag">Java (Basic)</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <span>Python</span>
-              <div class="bar"><div class="bar-fill" data-width="85"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>HTML/CSS</span>
-              <div class="bar"><div class="bar-fill" data-width="75"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>C / Java</span>
-              <div class="bar"><div class="bar-fill bar-purple" data-width="45"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="bi bi-tools"></i>
-            <h3>Tools & Libraries</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag tag-purple">Jupyter Notebook</span>
-            <span class="skill-tag tag-purple">MySQL</span>
-            <span class="skill-tag tag-purple">OpenCV</span>
-            <span class="skill-tag tag-purple">NumPy</span>
-            <span class="skill-tag tag-purple">Pandas</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <span>Jupyter / MySQL</span>
-              <div class="bar"><div class="bar-fill bar-purple" data-width="80"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>OpenCV</span>
-              <div class="bar"><div class="bar-fill bar-purple" data-width="70"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Pandas / NumPy</span>
-              <div class="bar"><div class="bar-fill bar-purple" data-width="72"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="bi bi-cpu"></i>
-            <h3>AI / ML</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag tag-green">Machine Learning</span>
-            <span class="skill-tag tag-green">Computer Vision</span>
-            <span class="skill-tag tag-green">Data Analysis</span>
-            <span class="skill-tag tag-green">Scikit-learn</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <span>Machine Learning</span>
-              <div class="bar"><div class="bar-fill bar-green" data-width="75"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Computer Vision</span>
-              <div class="bar"><div class="bar-fill bar-green" data-width="70"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Data Analysis</span>
-              <div class="bar"><div class="bar-fill bar-green" data-width="68"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="soft-skills reveal">
-        <h3>Other Strengths</h3>
-        <div class="soft-tags">
-          <span class="soft-tag"><i class="bi bi-lightbulb"></i> Problem Solving</span>
-          <span class="soft-tag"><i class="bi bi-book"></i> Self Learning</span>
-          <span class="soft-tag"><i class="bi bi-people"></i> Leadership</span>
-          <span class="soft-tag"><i class="bi bi-diagram-3"></i> System Thinking</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="projects-section section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// WHAT I BUILT</span>
-        <h2 class="section-title">My <span class="accent">Projects</span></h2>
-      </div>
-      <div class="projects-grid">
-
-        <div class="project-card reveal">
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <div class="project-icon"><i class="bi bi-house-heart"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/Yadhu10nm" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-          <h3 class="project-title">Bengaluru House Price Prediction</h3>
-          <p class="project-desc">ML model that predicts Bengaluru real estate prices based on location, BHK, and square footage. Built with regression techniques and data cleaning pipelines.</p>
-          <div class="project-tech">
-            <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span>
-          </div>
-          <div class="project-preview">
-            <iframe src="https://drive.google.com/file/d/1LynsEmsE5LM_ech0EKteAjAgFS6Ahs85/preview" width="100%" height="220" allow="autoplay" title="House Price Prediction"></iframe>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-glow glow-purple"></div>
-          <div class="project-header">
-            <div class="project-icon"><i class="bi bi-calculator"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/Yadhu10nm" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-          <h3 class="project-title">Virtual Calculator</h3>
-          <p class="project-desc">A hands-free virtual calculator using computer vision. Uses hand gestures detected through the webcam to perform arithmetic operations — no touch needed.</p>
-          <div class="project-tech">
-            <span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>CV2</span>
-          </div>
-          <div class="project-preview">
-            <iframe src="https://drive.google.com/file/d/1Lzq_oJ0cY63KStWyLMBcMQcvlGvs4NtR/preview" width="100%" height="220" allow="autoplay" title="Virtual Calculator"></iframe>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-glow glow-green"></div>
-          <div class="project-header">
-            <div class="project-icon"><i class="bi bi-controller"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/Yadhu10nm" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-          <h3 class="project-title">Hand Gesture Controlled Game</h3>
-          <p class="project-desc">Control a game entirely using hand gestures captured via webcam. Real-time gesture recognition maps hand movements to game controls for an immersive experience.</p>
-          <div class="project-tech">
-            <span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>Pygame</span>
-          </div>
-          <div class="project-preview">
-            <iframe src="https://drive.google.com/file/d/1M1FMv9EA-ZQbCo-5JxC1Ndo6RpJPf_lY/preview" width="100%" height="220" allow="autoplay" title="Gesture Game"></iframe>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <div class="project-icon"><i class="bi bi-brush"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/Yadhu10nm" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-          <h3 class="project-title">Virtual Drawing</h3>
-          <p class="project-desc">Draw in the air using your finger! This computer vision app tracks fingertip movement and paints on a virtual canvas in real-time using just a webcam.</p>
-          <div class="project-tech">
-            <span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>NumPy</span>
-          </div>
-          <div class="project-preview">
-            <iframe src="https://drive.google.com/file/d/1Lz4kDSfZVI1Jyr831kYw92eq6FVcWsAn/preview" width="100%" height="220" allow="autoplay" title="Virtual Drawing"></iframe>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-glow glow-purple"></div>
-          <div class="project-header">
-            <div class="project-icon"><i class="bi bi-mic"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/Yadhu10nm" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-          <h3 class="project-title">Text to Speech</h3>
-          <p class="project-desc">A Python-based text-to-speech converter that transforms written text into natural-sounding audio output using speech synthesis libraries.</p>
-          <div class="project-tech">
-            <span>Python</span><span>pyttsx3</span><span>gTTS</span>
-          </div>
-          <div class="project-preview">
-            <iframe src="https://drive.google.com/file/d/1Luus8g1saQ6ELHiGykWoEBHcL6R_JrQ9/preview" width="100%" height="220" allow="autoplay" title="Text to Speech"></iframe>
-          </div>
-        </div>
-
-        <div class="project-card more-projects-card reveal">
-          <div class="project-glow glow-green"></div>
-          <div class="more-projects-inner">
-            <i class="bi bi-github more-icon"></i>
-            <h3>More Projects</h3>
-            <p>Explore all my work on GitHub — including more ML experiments and computer vision projects.</p>
-            <a href="https://github.com/Yadhu10nm" target="_blank" class="btn btn-outline btn-sm">
-              Visit GitHub <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION SECTION -->
-  <section id="education" class="education-section section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// BACKGROUND</span>
-        <h2 class="section-title">My <span class="accent">Education</span></h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-year">2024 – Present</span>
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-            <p class="timeline-institution">Surana College (Autonomous), Bengaluru</p>
-            <div class="timeline-scores">
-              <span class="score-badge">1st Sem SGPA: 8.69</span>
-              <span class="score-badge">2nd Sem SGPA: 8.40</span>
-            </div>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot dot-purple"></div>
-          <div class="timeline-content">
-            <span class="timeline-year">Completed 2023</span>
-            <h3>12th Standard (Higher Secondary)</h3>
-            <p class="timeline-institution">Indira Gandhi Public School, Mambaram, Kannur, Kerala</p>
-            <div class="timeline-scores">
-              <span class="score-badge score-purple">Scored: 84%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS SECTION -->
-  <section id="certifications" class="certifications-section section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// CREDENTIALS</span>
-        <h2 class="section-title">My <span class="accent">Certifications</span></h2>
-      </div>
-      <div class="certs-grid">
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="bi bi-patch-check-fill"></i></div>
-          <img src="certificates/python.jpg" alt="Python Certificate" onerror="this.style.opacity='0.3'">
-          <div class="cert-info">
-            <h3>Python: Beginner to Advanced</h3>
-            <p class="cert-issuer"><i class="bi bi-building"></i> Codebasics</p>
-          </div>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-icon cert-icon-purple"><i class="bi bi-patch-check-fill"></i></div>
-          <img src="certificates/machine_learning.jpg" alt="ML Certificate" onerror="this.style.opacity='0.3'">
-          <div class="cert-info">
-            <h3>Complete Machine Learning with Python</h3>
-            <p class="cert-issuer"><i class="bi bi-building"></i> Udemy</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="contact-section section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// GET IN TOUCH</span>
-        <h2 class="section-title">Contact <span class="accent">Me</span></h2>
-      </div>
-      <div class="contact-wrapper">
-        <div class="contact-info reveal">
-          <p class="contact-intro">I'm open to collaborations, internships, and exciting ML/AI projects. Feel free to reach out!</p>
-          <div class="contact-links">
-            <a href="tel:+918111835438" class="contact-link">
-              <span class="contact-link-icon"><i class="bi bi-telephone-fill"></i></span>
-              <div>
-                <span class="contact-link-label">Phone</span>
-                <span class="contact-link-value">+91 81118 35438</span>
-              </div>
-            </a>
-            <a href="https://www.linkedin.com/in/yadhu-krishna-nm-0b5b5b31a" target="_blank" class="contact-link">
-              <span class="contact-link-icon"><i class="bi bi-linkedin"></i></span>
-              <div>
-                <span class="contact-link-label">LinkedIn</span>
-                <span class="contact-link-value">yadhu-krishna-nm</span>
-              </div>
-            </a>
-            <a href="https://github.com/Yadhu10nm" target="_blank" class="contact-link">
-              <span class="contact-link-icon"><i class="bi bi-github"></i></span>
-              <div>
-                <span class="contact-link-label">GitHub</span>
-                <span class="contact-link-value">Yadhu10nm</span>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/_yadh.u_" target="_blank" class="contact-link">
-              <span class="contact-link-icon"><i class="bi bi-instagram"></i></span>
-              <div>
-                <span class="contact-link-label">Instagram</span>
-                <span class="contact-link-value">_yadh.u_</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="contact-form-wrap reveal">
-          <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="e.g. Arjun Sharma" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" placeholder="you@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              <i class="bi bi-send-fill"></i> Send Message
-            </button>
-            <p class="form-note" id="formNote"></p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
-      <span class="footer-brand">Yadhu Krishna NM</span>
-      <span class="footer-sep">·</span>
-      <span>Built with passion for AI/ML</span>
-      <span class="footer-sep">·</span>
-      <span>© 2025</span>
-    </div>
-    <div class="footer-socials">
-      <a href="https://github.com/Yadhu10nm" target="_blank"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/yadhu-krishna-nm-0b5b5b31a" target="_blank"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.instagram.com/_yadh.u_" target="_blank"><i class="bi bi-instagram"></i></a>
-    </div>
+    <p>&copy; 2026 Yadhu Krishna NM. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <a class="whatsapp-float" href="https://wa.me/918111835438?text=Hi%20Yadhu%20I%20saw%20your%20portfolio" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.min.js"></script>
+  <script>
+    const navMenu = document.getElementById("navMenu");
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+
+    hamburgerBtn.addEventListener("click", () => {
+      navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
+    });
+
+    document.querySelectorAll("#navMenu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.style.display = "none";
+      });
+    });
+
+    function setupHorizontalScroll(trackId, prevId, nextId) {
+      const track = document.getElementById(trackId);
+      const prev = document.getElementById(prevId);
+      const next = document.getElementById(nextId);
+      const scrollByCard = () => {
+        const firstCard = track.querySelector(".scroll-item");
+        return firstCard ? firstCard.offsetWidth + 18 : 300;
+      };
+
+      prev.addEventListener("click", () => track.scrollBy({ left: -scrollByCard(), behavior: "smooth" }));
+      next.addEventListener("click", () => track.scrollBy({ left: scrollByCard(), behavior: "smooth" }));
+
+      track.addEventListener(
+        "wheel",
+        (e) => {
+          if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+            e.preventDefault();
+            track.scrollLeft += e.deltaY;
+          }
+        },
+        { passive: false }
+      );
+
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+
+      track.addEventListener("pointerdown", (e) => {
+        isDown = true;
+        startX = e.pageX;
+        scrollLeft = track.scrollLeft;
+        track.classList.add("dragging");
+        track.setPointerCapture(e.pointerId);
+      });
+
+      track.addEventListener("pointermove", (e) => {
+        if (!isDown) return;
+        const distance = (e.pageX - startX) * 1.1;
+        track.scrollLeft = scrollLeft - distance;
+      });
+
+      ["pointerup", "pointerleave", "pointercancel"].forEach((evt) => {
+        track.addEventListener(evt, () => {
+          isDown = false;
+          track.classList.remove("dragging");
+        });
+      });
+    }
+
+    setupHorizontalScroll("projectsTrack", "projectsPrev", "projectsNext");
+    setupHorizontalScroll("certTrack", "certPrev", "certNext");
+
+    const greetings = [
+      "Namaste",
+      "\u0D28\u0D2E\u0D38\u0D4D\u0D15\u0D3E\u0D30\u0D02",
+      "\u0928\u092E\u0938\u094D\u0924\u0947",
+      "\u0BB5\u0BA3\u0B95\u0BCD\u0B95\u0BAE\u0BCD",
+      "\u0CA8\u0CAE\u0CB8\u0CCD\u0C95\u0CBE\u0CB0",
+      "\u0C28\u0C2E\u0C38\u0C4D\u0C15\u0C3E\u0C30\u0C02"
+    ];
+
+    const welcomeText = document.getElementById("welcomeText");
+    const welcomeOverlay = document.getElementById("welcomeOverlay");
+    let greetIndex = 0;
+
+    function showNextGreeting() {
+      if (greetIndex >= greetings.length) {
+        setTimeout(() => welcomeOverlay.classList.add("hidden-overlay"), 250);
+        return;
+      }
+
+      welcomeText.classList.remove("show");
+      setTimeout(() => {
+        welcomeText.textContent = greetings[greetIndex];
+        welcomeText.classList.add("show");
+        greetIndex += 1;
+        setTimeout(showNextGreeting, 520);
+      }, 140);
+    }
+
+    showNextGreeting();
+    setTimeout(() => welcomeOverlay.classList.add("hidden-overlay"), 3900);
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isMobile = window.matchMedia("(max-width: 991px)").matches;
+    const pointer = { x: 0, y: 0 };
+
+    window.addEventListener("pointermove", (e) => {
+      pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
+      pointer.y = -(e.clientY / window.innerHeight) * 2 + 1;
+    });
+
+    function createNeuralNetwork(scene) {
+      const nodeCount = isMobile ? 26 : 42;
+      const nodePositions = [];
+
+      for (let i = 0; i < nodeCount; i++) {
+        const radius = 3.3 + Math.random() * 1.6;
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.acos(2 * Math.random() - 1);
+        const x = radius * Math.sin(phi) * Math.cos(theta);
+        const y = radius * Math.cos(phi);
+        const z = radius * Math.sin(phi) * Math.sin(theta);
+        nodePositions.push(new THREE.Vector3(x, y, z));
+      }
+
+      const nodeGeometry = new THREE.BufferGeometry().setFromPoints(nodePositions);
+      const nodeMaterial = new THREE.PointsMaterial({
+        color: 0x8df4ff,
+        size: isMobile ? 0.05 : 0.07,
+        transparent: true,
+        opacity: 0.9
+      });
+      const nodes = new THREE.Points(nodeGeometry, nodeMaterial);
+      scene.add(nodes);
+
+      const linePoints = [];
+      const maxDist = 2.8;
+      for (let i = 0; i < nodePositions.length; i++) {
+        for (let j = i + 1; j < nodePositions.length; j++) {
+          if (nodePositions[i].distanceTo(nodePositions[j]) < maxDist) {
+            linePoints.push(nodePositions[i], nodePositions[j]);
+          }
+        }
+      }
+
+      const lineGeometry = new THREE.BufferGeometry().setFromPoints(linePoints);
+      const lineMaterial = new THREE.LineBasicMaterial({
+        color: 0x2df5ff,
+        transparent: true,
+        opacity: 0.22
+      });
+      const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
+      scene.add(lines);
+
+      return { nodes, lines };
+    }
+
+    function initBackgroundThree() {
+      const canvas = document.getElementById("three-bg");
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(58, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.3 : 1.7));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      const ambient = new THREE.AmbientLight(0x78daff, 0.42);
+      scene.add(ambient);
+
+      const pointLight = new THREE.PointLight(0x00fff0, 1.25, 80);
+      pointLight.position.set(7, 5, 8);
+      scene.add(pointLight);
+
+      camera.position.set(0, 0, 14);
+
+      const aiCore = new THREE.Group();
+      scene.add(aiCore);
+
+      const coreGeometry = new THREE.TorusKnotGeometry(1.95, 0.42, 160, 24);
+      const coreMaterial = new THREE.MeshStandardMaterial({
+        color: 0x46ecff,
+        emissive: 0x0e6a86,
+        metalness: 0.5,
+        roughness: 0.25
+      });
+      const coreMesh = new THREE.Mesh(coreGeometry, coreMaterial);
+      aiCore.add(coreMesh);
+
+      const shellGeometry = new THREE.IcosahedronGeometry(3.25, 1);
+      const shellMaterial = new THREE.MeshBasicMaterial({
+        color: 0x00ffb3,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.2
+      });
+      const shellMesh = new THREE.Mesh(shellGeometry, shellMaterial);
+      aiCore.add(shellMesh);
+
+      const ringGeometry = new THREE.TorusGeometry(4.6, 0.03, 10, 120);
+      const ringMaterial = new THREE.MeshBasicMaterial({
+        color: 0x88f0ff,
+        transparent: true,
+        opacity: 0.5
+      });
+      const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+      ring.rotation.x = Math.PI / 2.4;
+      aiCore.add(ring);
+
+      const starCount = isMobile ? 480 : 900;
+      const starPositions = new Float32Array(starCount * 3);
+      for (let i = 0; i < starCount * 3; i++) {
+        starPositions[i] = (Math.random() - 0.5) * 60;
+      }
+      const starGeometry = new THREE.BufferGeometry();
+      starGeometry.setAttribute("position", new THREE.BufferAttribute(starPositions, 3));
+      const starMaterial = new THREE.PointsMaterial({
+        color: 0xb6f8ff,
+        size: isMobile ? 0.03 : 0.05,
+        transparent: true,
+        opacity: 0.65
+      });
+      const stars = new THREE.Points(starGeometry, starMaterial);
+      scene.add(stars);
+
+      const neuralGroup = new THREE.Group();
+      scene.add(neuralGroup);
+      const { nodes, lines } = createNeuralNetwork(neuralGroup);
+
+      function render() {
+        requestAnimationFrame(render);
+        const speed = reducedMotion ? 0.2 : 1;
+
+        coreMesh.rotation.x += 0.003 * speed;
+        coreMesh.rotation.y += 0.0042 * speed;
+        shellMesh.rotation.y -= 0.0015 * speed;
+        ring.rotation.z += 0.0019 * speed;
+        stars.rotation.y += 0.00022 * speed;
+        neuralGroup.rotation.y += 0.0011 * speed;
+        neuralGroup.rotation.x += 0.0006 * speed;
+
+        camera.position.x += (pointer.x * 1.2 - camera.position.x) * 0.02;
+        camera.position.y += (pointer.y * 0.7 - camera.position.y) * 0.02;
+        camera.lookAt(scene.position);
+        renderer.render(scene, camera);
+      }
+
+      render();
+
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          const scrollAmount = window.scrollY * 0.00085;
+          aiCore.rotation.z = scrollAmount;
+          nodes.material.opacity = Math.max(0.35, 0.9 - scrollAmount * 0.3);
+          lines.material.opacity = Math.max(0.12, 0.22 - scrollAmount * 0.06);
+        },
+        { passive: true }
+      );
+    }
+
+    function initHeroThree() {
+      const heroCanvas = document.getElementById("hero-three");
+      if (!heroCanvas) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(48, heroCanvas.clientWidth / heroCanvas.clientHeight, 0.1, 100);
+      const renderer = new THREE.WebGLRenderer({ canvas: heroCanvas, alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+      renderer.setSize(heroCanvas.clientWidth, heroCanvas.clientHeight, false);
+      camera.position.z = 6.4;
+
+      const light = new THREE.PointLight(0x66f7ff, 1.2, 25);
+      light.position.set(4, 4, 6);
+      scene.add(light);
+      scene.add(new THREE.AmbientLight(0x6fd7ff, 0.3));
+
+      const group = new THREE.Group();
+      scene.add(group);
+
+      const orb = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(1.45, 2),
+        new THREE.MeshStandardMaterial({
+          color: 0x39e8ff,
+          emissive: 0x0a5d7a,
+          metalness: 0.55,
+          roughness: 0.3
+        })
+      );
+      group.add(orb);
+
+      const wire = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(1.95, 1),
+        new THREE.MeshBasicMaterial({
+          color: 0x00ffba,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.35
+        })
+      );
+      group.add(wire);
+
+      const orbitRing = new THREE.Mesh(
+        new THREE.TorusGeometry(2.65, 0.04, 8, 100),
+        new THREE.MeshBasicMaterial({ color: 0x8af9ff, transparent: true, opacity: 0.7 })
+      );
+      orbitRing.rotation.x = Math.PI / 2.8;
+      group.add(orbitRing);
+
+      const miniParticles = new THREE.Points(
+        new THREE.BufferGeometry(),
+        new THREE.PointsMaterial({ color: 0xbaf9ff, size: 0.045, transparent: true, opacity: 0.7 })
+      );
+
+      const miniPos = new Float32Array(220 * 3);
+      for (let i = 0; i < miniPos.length; i++) {
+        miniPos[i] = (Math.random() - 0.5) * 12;
+      }
+      miniParticles.geometry.setAttribute("position", new THREE.BufferAttribute(miniPos, 3));
+      scene.add(miniParticles);
+
+      function render() {
+        requestAnimationFrame(render);
+        const speed = reducedMotion ? 0.2 : 1;
+        orb.rotation.y += 0.005 * speed;
+        orb.rotation.x += 0.0022 * speed;
+        wire.rotation.y -= 0.0032 * speed;
+        orbitRing.rotation.z += 0.0036 * speed;
+        miniParticles.rotation.y += 0.0014 * speed;
+        group.rotation.y += pointer.x * 0.01;
+        group.rotation.x += pointer.y * 0.006;
+        renderer.render(scene, camera);
+      }
+
+      render();
+
+      window.addEventListener("resize", () => {
+        const width = heroCanvas.clientWidth;
+        const height = heroCanvas.clientHeight;
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height, false);
+      });
+    }
+
+    initBackgroundThree();
+    initHeroThree();
+  </script>
 </body>
 </html>
